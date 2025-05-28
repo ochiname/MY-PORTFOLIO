@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Edit Education Record</title>
+  <link rel="stylesheet" href="../css/update.css" />
+</head>
+<body>
+  <h1>Edit your Record</h1>
+
+<div>
+  <h2>User</h2>
+  <button id="loadBtn2" class="loader">Load Personal Records</button>
+
+  <select id="userRecordSelect">
+    <option value="">-- Select a record --</option>
+  </select>
+
+ <form id="userForm" class="hidden">
+  <input type="email" id="email" name="email" placeholder="Email" required />
+
+  <input type="text" id="first_name" name="first_name" placeholder="First Name" required />
+  <input type="text" id="last_name" name="last_name" placeholder="Last Name" required />
+  <input type="text" id="role" name="role" placeholder="Role" required />
+  <input type="text" id="location" name="location" placeholder="Location" required />
+  <textarea id="bio" name="bio" placeholder="Short Bio (max 500 characters)" maxlength="500" rows="4"></textarea>
+  <input type="text" id="phone" name="phone" placeholder="Phone (10–15 digits)" required />
+  <input type="url" id="linkedin" name="linkedin" placeholder="LinkedIn URL" />
+  <input type="url" id="github" name="github" placeholder="GitHub URL" />
+  <input type="url" id="twitter" name="twitter" placeholder="Twitter URL" />
+  <button type="submit" class="update-btn1">Update</button>
+  <!--const submitBtn = form.querySelector("button.update-btn1");-->
+</form>
+</div>
+
+<div>
+    <h2> Education</h2>
+  <button id="loadBtn" class="loader">Load Education Records</button>
+
+  <select id="eduRecordSelect">
+    <option value="">-- Select a record --</option>
+  </select>
+
+  <form id="educationForm" class="hidden">
+    <input type="text" id="institution" name="institution" placeholder="Institution" required />
+    <input type="text" id="degree" name="degree" placeholder="Degree" required />
+    <input type="number" id="start_year" name="start_year" placeholder="Start Year" required />
+    <input type="number" id="end_year" name="end_year" placeholder="End Year" required />
+    <button type="submit" class="update-btn">Update</button>
+  </form>
+</div>
+
+<div>
+  <h2>Contact</h2>
+  <button id="loadBtn3" class="loader">Load Contact Records</button>
+
+  <select id="contactRecordSelect">
+    <option value="">-- Select a record --</option>
+  </select>
+
+ <form id="contactForm" class="hidden">
+    <input type="text" id="contact_email" name="email" placeholder="Email" required />
+
+    <input type="text" id="contact_location" name="location" placeholder="Location" required />
+
+    <input type="text" id="phone1" name="phone1" placeholder="Primary Phone (any string)" required />
+
+    <input type="text" id="phone2" name="phone2" placeholder="Secondary Phone (any string)" />
+    <button type="submit" class="update-btn2">Update</button>
+</form>
+</div>
+
+
+<div>
+  <h2>certification</h2>
+  <button id="loadBtn4" class="loader">Load Certification Records</button>
+
+   <Select id="certificationRecordSelect">
+   </Select>
+   <form id="certificationForm" class="hidden">
+      <input type="text" id="certification_name" name="certification" placeholder="Certification" required />
+
+      <input type="text" id="institution_name" name="institution" placeholder="Institution" required />
+
+      <input type="number" id="certification_year" name="certification_year"
+          placeholder="Year (e.g., 2032)"
+            min="1900"
+            max="2100"
+            required
+      />
+
+      <button type="submit" class="update-btn3">Update</button>
+   </form>
+</div>
+
+ 
+<div>
+  <h2>Skills</h2>
+  <button id="loadBtnSkills" class="loader">Load Skill Records</button>
+
+  <select id="skillRecordSelect">
+    <option value="">-- Select a record --</option>
+  </select>
+
+  <form id="skillForm" class="hidden">
+    <input 
+      type="text" 
+      id="skill_name" 
+      name="skill_name" 
+      placeholder="Skill Name" 
+      required 
+    />
+
+    <input 
+      type="number" 
+      id="proficiency" 
+      name="proficiency" 
+      placeholder="Proficiency (e.g., 1-10)" 
+      min="10" 
+      max="100" 
+      required 
+    />
+
+    <button type="submit" class="update-btn-skill">Update</button>
+  </form>
+</div>
+  
+<div>
+  <h2>Project</h2>
+  <button id="loadBtnProjects" class="loader">Load Project Records</button>
+
+  <select id="projectRecordSelect">
+    <option value="">-- Select a record --</option>
+  </select>
+
+  <form id="projectForm" class="hidden">
+    <input
+      type="text"
+      id="project_name"
+      name="project_name"
+      placeholder="Project Name"
+      required
+    />
+
+    <input
+      type="text"
+      id="description"
+      name="description"
+      placeholder="Project Description"
+      required
+    />
+
+    <input
+      type="text"
+      id="technologies"
+      name="technologies"
+      placeholder="Technologies Used"
+      required
+    />
+
+    <button type="submit" class="update-btn-project">Update</button>
+  </form>
+</div>
+
+<div>
+  <h2>Language</h2>
+  <button id="loadBtnLanguages" class="loader">Load Language Records</button>
+
+  <select id="languageRecordSelect">
+    <option value="">-- Select a record --</option>
+  </select>
+  <form id="languageForm" class="hidden">
+    <input type="text" id="language_name" name="language_name" placeholder="Language Name" required/>
+    <input type="text" id="language_proficiency" name="proficiency" placeholder="Proficiency Level" required/>
+    <button type="submit" class="update-btn-language">Update</button>
+  </form>
+</div>
+
+<div>
+  <h2>Articles</h2>
+  <button id="loadBtnArticles" class="loader">Load Articles Records</button>
+
+  <select id="articleRecordSelect">
+    <option value="">-- Select an article --</option>
+  </select>
+  <form id="articleForm" class="hidden">
+    <!-- Title (required) -->
+    <input
+      type="text"
+      id="article_title"
+      name="title"
+      placeholder="Article Title"
+      required
+    />
+
+    <!-- Image URL (optional) -->
+    <input
+      type="url"
+      id="article_img_url"
+      name="img_url"
+      placeholder="Image URL"
+    />
+
+    <!-- Description (optional long text) -->
+    <textarea
+      id="article_description"
+      name="description"
+      placeholder="Description"
+      rows="4"
+    ></textarea>
+
+    <!-- Link to full article (optional) -->
+    <input
+      type="url"
+      id="article_link"
+      name="link_to_article"
+      placeholder="Link to full article"
+    />
+
+    <button type="submit" class="update-btn-article">Update</button>
+  </form>
+</div>
+
+<div>
+  <h2>Add New Skill</h2>
+
+  <form id="add_skillForm">
+    <!-- Skill Name (required) -->
+    <input
+      type="text"
+      id="add_skill_name"
+      name="skill_name"
+      placeholder="Skill Name"
+      required
+    />
+
+    <!-- Proficiency (required, 1-100) -->
+    <input
+      type="number"
+      id="add_skill_proficiency"
+      name="proficiency"
+      placeholder="Proficiency (1-100)"
+      min="10"
+      max="100"
+      required
+    />
+
+
+    <button type="submit" class="add-btn-skill">Submit</button>
+  </form>
+</div>
+
+
+<div>
+  <h2>Add New Article</h2>
+
+  <form id="add_articleForm">
+    <!-- Title (required) -->
+    <input
+      type="text"
+      id="add_article_title"
+      name="title"
+      placeholder="Article Title"
+      required
+    />
+
+    <!-- Image URL (optional) -->
+    <input
+      type="url"
+      id="add_article_img_url"
+      name="img_url"
+      placeholder="Image URL"
+    />
+
+    <!-- Description (optional long text) -->
+    <textarea
+      id="add_article_description"
+      name="description"
+      placeholder="Description"
+      rows="4"
+    ></textarea>
+
+    <!-- Link to full article (optional) -->
+    <input
+      type="url"
+      id="add_article_link"
+      name="link_to_article"
+      placeholder="Link to full article"
+    />
+
+    <button type="submit" class="add-btn-article">Submit</button>
+  </form>
+</div>
+
+
+<div>
+  <h2>Assign Image for Use</h2>
+
+  <!-- Load and select images -->
+  <button id="loadImagesBtn">Load Available Images</button>
+  <select id="imageSelect">
+    <option value="">-- Select an image --</option>
+  </select>
+
+  <!-- Display selected image preview -->
+  <div id="imagePreview" style="margin-top: 1em;">
+    <img id="previewImg" src="" alt="Preview" style="max-width: 300px; display: none;" />
+    <p id="imgDescription"></p>
+  </div>
+
+  <!-- Form to assign usage -->
+  <form id="assignPicForm" class="hidden">
+    <input
+      type="text"
+      id="usageType"
+      placeholder="Usage Type (e.g. profile_pic, background)"
+      required
+    />
+    <button type="submit">Assign Pic</button>
+  </form>
+</div>
+
+
+<div style="margin-top: 3em;">
+  <h2>Update Existing Pic</h2>
+
+  <!-- Load and select existing pics -->
+  <button id="loadPicRecordsBtn">Load Existing Pics</button>
+  <select id="picRecordSelect">
+    <option value="">-- Select a pic record --</option>
+  </select>
+
+  <!-- Update Form -->
+  <form id="updatePicForm" class="hidden">
+    <!-- Choose a new image URL (from images) -->
+    <select id="updateImageUrl">
+      <option value="">-- Select new image URL --</option>
+    </select>
+
+    <!-- Update usage_type -->
+    <input
+      type="text"
+      id="updateUsageType"
+      placeholder="New Usage Type (e.g. profile_pic)"
+      required
+    />
+
+    <button type="submit">Update Pic</button>
+  </form>
+</div>
+
+
+<div>
+<form id="uploadImageForm" enctype="multipart/form-data">
+  <label for="upload_ImgTitle">Title:</label><br />
+  <input type="text" id="upload_ImgTitle" name="title" required /><br /><br />
+
+  <label for="upload_ImgDescription">Description:</label><br />
+  <textarea id="upload_ImgDescription" name="description" rows="3" required></textarea><br /><br />
+
+  <label for="upload_ImgFile">Select image:</label><br />
+  <input type="file" id="upload_ImgFile" name="file" accept="image/*" required /><br /><br />
+
+  <button type="submit">Upload Image</button>
+</form>
+</div>
+
+
+  <script type="module" src="../js/update/user_update.js" defer></script>
+  <script type="module" src="../js/update/edu_update.js" defer></script>
+  <script type="module" src="../js/update/contact.js" defer></script>
+  <script type="module" src="../js/update/certificate.js" defer></script>
+  <script type="module" src="../js/update/skill.js" defer></script>
+  <script type="module" src="../js/update/project.js" defer></script>
+  <script type="module" src="../js/update/language.js" defer></script>
+  <script type="module" src="../js/update/article.js" defer></script>
+  <script type="module" src="../js/update/add_articles.js" defer></script>
+  <script type="module" src="../js/update/assing_pic.js" defer></script>
+  <script type="module"  src="../js/update/update_pic_use.js" defer></script>
+  <script type="module" src="../js/update/upladeImages.js" defer></script>
+  <script type="module" src="../js/update/addskills.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,133 @@
+/* Body Styling */
+body {
+    background-color: #f4f4f9;
+    color: #333;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.8;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Dark Mode */
+body.dark-mode {
+    background-color: #121212;
+    color: #ccc;
+}
+
+/* Navigation Bar */
+#holder {
+    font-weight: bolder;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(5px);
+}
+
+#holder a {
+    color: white;
+    font-size: 1.2rem;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+#holder a:hover {
+    color: #f39c12;
+}
+
+/* Mode Toggle Button Styling */
+button.mode-toggle {
+    background-color: #f39c12; /* Orange background */
+    color: white; /* White text */
+    border: none; /* Remove default border */
+    padding: 10px 20px; /* Add padding */
+    font-size: 1rem; /* Set font size */
+    font-weight: bold; /* Bold text */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Change cursor on hover */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+}
+
+button.mode-toggle:hover {
+    background-color: #e67e22; /* Slightly darker orange on hover */
+    color: #000; /* Change text color on hover */
+}
+
+/* Dark Mode Button Styling */
+body.dark-mode button.mode-toggle {
+    background-color: #333; /* Dark background for dark mode */
+    color: #f39c12; /* Orange text */
+}
+
+/* Main Section */
+#container {
+    text-align: center;
+    padding: 40px 20px;
+    margin: 20px auto;
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    background-image: url(https://img.freepik.com/free-vector/bright-technology-background_23-2148458516.jpg?ga=GA1.1.428427330.1724148117);
+
+}
+
+#container h1 {
+    font-size: 2.5rem;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+#container P {
+    font-size: 1.2rem;
+    color: #ffffff;
+    margin-bottom: 10px
+}
+#container1 h2 {
+    font-size: 2rem;
+    color: #21296e;
+    margin: 20px 0;
+}
+
+/* Card Section */
+#container2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    background-color: #060769e5;
+}
+
+.repo-item {
+    width: 280px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.repo-item img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.repo-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    margin-top: 20px;
+}

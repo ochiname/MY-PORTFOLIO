@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A showcase of my development projects and thoughts.">
+    <meta name="keywords" content="Developer Portfolio, Projects, Coding, Web Development">
+    <title>My Projects - David Unugor</title>
+    <link rel="stylesheet" href="../css/work.css">
+</head>
+
+<body>
+    <header id="holder">
+        <a href="index.html" aria-label="Return to homepage">
+            <img src="https://t3.ftcdn.net/jpg/04/99/53/88/240_F_499538812_gWokfFEbEYx9Y2fJmN0qa9Pcbupsm561.jpg" alt="Logo" width="70" height="70">
+        </a>
+        <nav>
+            <a href="work.html" title="View my projects">PROJECTS</a>
+            <a href="about.html" title="Learn more about me and contact">ABOUT</a>
+            <a href="thoughts.html" title="Read my blog and thoughts">THOUGHTS</a>
+        </nav>
+        <button class="mode-toggle" onclick="toggleMode()"><strong>MODE</strong></button>
+    </header>
+
+    <main>
+        <section id="container">
+            <h1>PROJECTS</h1>
+            <p>Explore some of my best work and initiatives below.</p>
+        </section>
+
+        <section id="container1">
+            <h2>Get Busy Here</h2>
+        </section>
+
+        <section id="container2">
+            <!-- Dynamic project cards can go here -->
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 USO. All Rights Reserved. Designed with ❤️ by <a href="mailto:unugorstephendavid@gmail.com">Unugor Ochiname</a>.</p>
+    </footer>
+
+    <script>
+        function toggleMode() {
+            document.body.classList.toggle('dark-mode');
+        }
+    </script>
+    <script type="module" src="../js/work.js" defer></script>
+</body>
+
+</html>

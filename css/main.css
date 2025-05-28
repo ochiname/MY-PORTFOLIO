@@ -1,0 +1,165 @@
+/* General body styles */
+body {
+    background-color: white;
+    color: rgb(33, 33, 33); /* Changed text color for readability */
+    font-family: 'Inter', sans-serif; /* Stylish font */
+    line-height: 1.6;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Dark mode styles */
+body.dark-mode {
+    background-color: #000000;
+    color: #f4f4f4;
+}
+
+/* Header styling */
+#holder {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: rgba(7, 7, 7, 0.9);
+    backdrop-filter: blur(5px);
+}
+
+#holder a {
+    color: white;
+    text-align: left;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px;
+    font-size: 20px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+#holder a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+}
+
+.mode-toggle {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #ff7d03;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.mode-toggle:hover {
+    background-color: #e65a00;
+}
+
+/* Main container */
+#container {
+    text-align: center;
+    padding: 40px 20px;
+    background-image: url(https://img.freepik.com/free-vector/futuristic-cityscape-background_107791-29600.jpg?t=st=1733264595~exp=1733268195~hmac=6b921506be5af648ab87ccb7536d5ddd080da2fc2d49b6890e7c5bd46b04a0fd&w=826);
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+}
+
+/* Main name styling */
+h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #ffc107;
+    margin-bottom: 20px;
+    border-bottom: 2px solid white;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+h2 {
+    font-size: 2rem;
+    color: #ff5722;
+    margin-top: 20px;
+}
+
+/* Profile Image */
+#container3 {
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 10px;
+    padding: 15px;
+    display: inline-block;
+    margin-top: 30px;
+}
+
+#container3 img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    background-color: #070707bd;
+    color: white;
+    padding: 15px 10px;
+    margin-top: 40px;
+    font-size: 1rem;
+}
+
+footer a {
+    color: #ff5722;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #ffc107;
+}
+/* Hamburger button - hidden by default */
+#menu-btn {
+  display: none;
+  font-size: 28px;
+  background: none;
+  border: none;
+  color: white; /* matches your header text */
+  cursor: pointer;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+#menu-btn:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Responsive: show hamburger and toggle menu */
+@media (max-width: 768px) {
+  #menu-btn {
+    display: block;
+  }
+
+  /* Hide nav links by default */
+  #nav-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px; /* same height as your header */
+    right: 20px;
+    background-color: rgba(7, 7, 7, 0.9);
+    backdrop-filter: blur(5px);
+    border-radius: 10px;
+    padding: 10px 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    z-index: 1000;
+  }
+
+  /* Show nav when active */
+  #nav-menu.active {
+    display: flex;
+  }
+
+  /* Stack nav links vertically with spacing */
+  #nav-menu a {
+    margin: 10px 0;
+    font-size: 18px;
+  }
+}

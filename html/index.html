@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UOS</title>
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header id="holder">
+        <a href="index.html">
+            <img src="https://t3.ftcdn.net/jpg/04/99/53/88/240_F_499538812_gWokfFEbEYx9Y2fJmN0qa9Pcbupsm561.jpg" alt="UOS Logo" width="70" height="70"     
+        </a>
+        <nav>
+            <a href="work.html">PROJECTS</a>
+            <a href="about.html">ABOUT</a>
+            <a href="thoughts.html">THOUGHTS</a>
+        </nav>
+        <button id="menu-btn" aria-label="Toggle Menu" onclick="toggleMenu()">☰</button>
+
+        <button class="mode-toggle" onclick="toggleMode()">MODE</button>
+    </header>
+
+    <!-- Main Section -->
+    <main>
+        <div id="container">
+            <h1>UNUGOR OCHINAME<br>STEPHEN-DAVID</h1>
+            <div id="container2">
+                <h2>Aboki-Mai-CODER</h2>
+            </div>
+            <div id="container3">
+                <img id="backgroung_profile_Img" src="" alt="Profile Picture" width="300" height="300">
+            </div>
+        </div>
+    </main>
+
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 UOS. All Rights Reserved. Designed with ❤️ by <a href="mailto:unugorstephendavid@gmail.com">Unugor Ochiname</a>.</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        function toggleMode() {
+            document.body.classList.toggle('dark-mode');
+        }
+    </script>
+    <script>
+        function toggleMenu() {
+            document.getElementById('nav-menu').classList.toggle('active');
+        }
+    </script>
+   <script type="module" src="../js/fetch/user.js" defer></script>
+</body>
+
+</html>

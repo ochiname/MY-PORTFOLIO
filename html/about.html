@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - CV</title>
+    <link rel="stylesheet" href="../css/about.css">
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header id="holder">
+        <nav>
+            <a id="img" href="index.html">
+                <img src="https://t3.ftcdn.net/jpg/04/99/53/88/240_F_499538812_gWokfFEbEYx9Y2fJmN0qa9Pcbupsm561.jpg" alt="UOS Logo" width="70" height="70">
+            </a>
+            <a id="nav">
+                <a href="index.html">HOME</a>
+                <a href="work.html">PROJECTS</a>
+                <a href="thoughts.html">THOUGHTS</a>
+                <button class="mode-toggle" onclick="toggleMode()">MODE</button>
+            </a>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- About Section -->
+        <section id="about-section">
+            <h1>About Me</h1>
+            <div class="about-content">
+                <div class="profile">
+                    <img id="profile_img" src="" alt="Profile Picture" width="300" height="300">
+                    <div class="personal-info">
+                        <h2 id="profile_firstName"></h2>
+                        <p id="profile_role"></p>
+                        <div class="social-links">
+                            <a id="LinkedIn" href="" class="social-icon">LinkedIn</a>
+                            <a id="GitHub" href="" class="social-icon">GitHub</a>
+                            <a id="Twitter" href="" class="social-icon">Twitter</a>
+                        </div>
+                    </div>
+                </div>
+                <p id="profile_bio"><strong></strong></p>
+                    
+            </div>
+        </section>
+
+        <section id="education-section">
+            <h1>Education</h1>
+            <ul>
+                <p id="degree"><strong></strong></p>
+                <p id="institution"></p> 
+                <p id="start"></p>
+            </ul>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills-section">
+            <h1>Skills</h1>
+            
+        </section>
+
+        <!-- Work Experience Section -->
+        <section id="work-experience">
+            
+        </section>
+
+        <!-- Other Projects Section -->
+        <section id="other-projects">
+            <h1>My Projects</h1>
+            <ul id="project-list">
+                
+            </ul>
+        </section>
+
+        <!-- Languages Section -->
+        <section id="languages-section">
+            <h1>Spoken Languages</h1>
+            <ul id="language-list">
+               
+            </ul>
+        </section>
+
+        <!-- Certifications Section -->
+        <section id="certifications-section">
+            <h1>Certifications</h1>
+            <ul id="certification-list">
+              
+            </ul>
+        </section>
+
+        <!-- Contact Section -->
+     <!-- Contact Section -->
+    <section id="contact-section">
+        <h1>Contact</h1>
+        <div class="contact-content">
+            <p>Email: <span id="contact-email">Loading...</span></p>
+            <p>Phone: <span id="contact-phone">Loading...</span></p>
+            <p>Location: <span id="contact-location">Loading...</span></p>
+        </div>
+    </section>
+
+
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 UOS. All Rights Reserved. Designed with ❤️ by <a href="mailto:unugorstephendavid@gmail.com">Unugor Ochiname</a>.</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        function toggleMode() {
+            // Toggle the 'light-mode' class on the body
+            document.body.classList.toggle('light-mode');
+        }
+    </script>
+    <script type="module" src="../js/fetch/profile_pic.js"></script>
+    <script type="module" src="../js/fetch/userName.js"></script>
+</body>
+
+</html>

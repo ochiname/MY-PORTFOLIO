@@ -1,0 +1,113 @@
+/* login.css */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1e1e1e, #3a3a3a);
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  color: #eee;
+}
+
+.login-container {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 3rem 4rem;
+  width: 320px;
+  box-shadow:
+    0 8px 32px 0 rgba( 31, 38, 135, 0.37 ),
+    inset 0 0 0 1px rgba( 255, 255, 255, 0.18 );
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  text-align: center;
+  color: whitesmoke;
+  transition: transform 0.3s ease;
+}
+
+.login-container:hover {
+  transform: scale(1.02);
+}
+
+h2 {
+  margin-bottom: 2rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.7);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  text-align: left;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: #d3d3d3;
+  text-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+}
+
+input[type="email"],
+input[type="password"] {
+  background: rgba(255, 255, 255, 0.15);
+  border: none;
+  border-radius: 12px;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1.5rem;
+  color: #eee;
+  font-size: 1rem;
+  box-shadow: inset 2px 2px 6px rgba(255, 255, 255, 0.3),
+              inset -2px -2px 6px rgba(0, 0, 0, 0.3);
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="email"]:focus,
+input[type="password"]:focus {
+  outline: none;
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: inset 4px 4px 10px rgba(255, 255, 255, 0.5),
+              inset -4px -4px 10px rgba(0, 0, 0, 0.5);
+}
+
+button {
+  background: rgba(255, 255, 255, 0.15);
+  color: #eee;
+  border: none;
+  border-radius: 15px;
+  padding: 0.9rem 0;
+  font-weight: 700;
+  font-size: 1.1rem;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+  user-select: none;
+}
+
+button:hover {
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.7),
+              0 0 8px rgba(255, 255, 255, 0.5);
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+@media (max-width: 400px) {
+  .login-container {
+    width: 90vw;
+    padding: 2rem;
+  }
+}
