@@ -5,10 +5,10 @@ document.getElementById('login-form').addEventListener('submit', async function 
   const email = document.getElementById('email').value;
   const password = document.getElementById('password').value;
 
-  const backendUrl = URL;
+  
 
   try {
-    const response = await fetch(`${backendUrl}api/user/login`, {
+    const response = await fetch(`${URL}api/user/login`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
