@@ -20,7 +20,7 @@ document.getElementById('login-form').addEventListener('submit', async function 
 
     if (response.ok && data.token) {
       sessionStorage.setItem('jwt_token', data.token);
-      window.location.href = '/portfolio-site/update.html';
+      window.location.href = '/update.html';
       showToast('Login successful!', 'success');
     } else {
       showToast(data.message || 'Login failed.', 'error');
