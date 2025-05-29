@@ -3,8 +3,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById('userForm');
   if (!form) return;
 
-  const apiBase = `${URL}/api/user/profile`; // GET user by token
-  const apiBase2 = `${URL}/api/user/update`; // PUT update user by token
+  const apiBase = `${URL}api/user/profile`; // GET user by token
+  const apiBase2 = `${URL}api/user/update`; // PUT update user by token
   const token = sessionStorage.getItem("jwt_token");
 
   const loadBtn = document.getElementById("loadBtn2");
