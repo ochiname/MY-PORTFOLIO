@@ -84,7 +84,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!id || !image_url || !usage_type) return alert("Missing data");
 
     try {
-      const res = await fetch(`${apiBase}/pics/${id}`, {
+      const res = await fetch(`${apiBase}/pic/${id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
