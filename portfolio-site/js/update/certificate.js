@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("certificationForm");
   if (!form) return;
 
-  const apiBase = `${URL}/api/user/certificate`; // GET certifications
+  const apiBase = `${URL}api/user/certificate`; // GET certifications
   const apiUpdate = `${URL}api/user/certificateUpdate`; // PUT certification update
   const token = sessionStorage.getItem("jwt_token");
 
