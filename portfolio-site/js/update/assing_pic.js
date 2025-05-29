@@ -1,7 +1,7 @@
 import { URL } from "../config.js";
 document.addEventListener("DOMContentLoaded", () => {
   const token = sessionStorage.getItem("jwt_token");
-  const apiBase = `${URL}/api/user`;
+  const apiBase = `${URL}api/user`;
   const loadBtn = document.getElementById("loadImagesBtn");
   const imageSelect = document.getElementById("imageSelect");
   const assignForm = document.getElementById("assignPicForm");
