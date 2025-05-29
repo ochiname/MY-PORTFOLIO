@@ -1,13 +1,14 @@
+import { URL } from './config.js';
 document.getElementById('login-form').addEventListener('submit', async function (e) {
   e.preventDefault();
 
   const email = document.getElementById('email').value;
   const password = document.getElementById('password').value;
 
-  const backendUrl = 'http://127.0.0.1:5000';
+  const backendUrl = URL;
 
   try {
-    const response = await fetch(`${backendUrl}/api/user/login`, {
+    const response = await fetch(`${backendUrl}api/user/login`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -19,7 +20,7 @@ document.getElementById('login-form').addEventListener('submit', async function 
 
     if (response.ok && data.token) {
       sessionStorage.setItem('jwt_token', data.token);
-      window.location.href = '/html/update.html';
+      window.location.href = '/portfolio-site/update.html';
       showToast('Login successful!', 'success');
     } else {
       showToast(data.message || 'Login failed.', 'error');
